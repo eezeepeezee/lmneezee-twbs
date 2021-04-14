@@ -1,0 +1,149 @@
+/* *
+ *
+ * Styling Layout Helpers
+ *
+ * */
+
+ /* Import Bootstrap */
+ @import "../__core-scss/__libs/bootstrap/functions";
+ @import "../__core-scss/__libs/bootstrap/variables";
+ @import "../__core-scss/__libs/bootstrap/mixins";
+
+/* Layout guides show the grid columns. Color is set in config.json */
+.layout-guides {
+  min-width: 320px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998 !important;
+  pointer-events: none;
+  display: flex;
+  opacity: 0;
+  margin: 0 auto !important;
+
+  .container,
+  .container-fluid {
+    height: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    .row {
+      height: 100%;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+
+      > *[class*='col'] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+
+        p {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Layout breakpoints shows current breakpoint and screen orientation */
+.layout-breakpoints {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999 !important;
+  pointer-events: none;
+  padding: 4px 16px;
+  border-radius: 0 0 4px 4px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  opacity: 0;
+}
+
+.layout-breakpoints::before {
+  @each $bpt, $bpt-value in $grid-breakpoints {
+    @if $bpt == "xs" {
+      content: "#{$bpt} ≥ #{$bpt-value}";
+    }
+    @else {
+      @include media-breakpoint-up(#{$bpt}) {
+        content: "#{$bpt} ≥ #{$bpt-value}";
+      }
+    }
+  }
+}
+
+/* Hiding cursor and disabling pointer events for testing keyboard-only accessibility */
+.mouse-killed {
+  pointer-events: none !important;
+  cursor: none !important;
+
+  *,
+  * &::before,
+  * &::after {
+    pointer-events: none !important;
+    cursor: none !important;
+  }
+}
+
+/* Blurring everything to test design for accents */
+.wrapper--blur {
+  filter: blur(5px);
+  overflow-x: hidden;
+}
+
+/* Adding outlines to everything on a page */
+.wrapper--outlined {
+  outline: 1px solid red;
+
+  > * {
+    outline: 1px solid green;
+
+    > * {
+      outline: 1px solid brown;
+
+      > * {
+        outline: 1px solid black;
+
+        > * {
+          outline: 1px solid silver;
+
+          > * {
+            outline: 1px solid pink;
+
+            > * {
+              outline: 1px solid grey;
+
+              > * {
+                outline: 1px solid violet;
+
+                > * {
+                  outline: 1px solid navy;
+
+                  > * {
+                    outline: 1px solid orange;
+
+                    > * {
+                      outline: 1px solid red;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

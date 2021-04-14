@@ -1,0 +1,23 @@
+{% extends '/layouts/layout-example.twig' %}
+{% set title = 'Page Example' %}
+
+<!-- [anycsslib.min] for /assets/css/libs/anycsslib.min.js -->
+{% set cssLibs = [] %}
+
+<!-- [anyjslib.min] for /assets/js/libs/anyjslib.min.js -->
+{% set jsLibs  = [] %}
+
+<!-- [myjscmp.min] for /assets/js/components/myjscmp.min.js -->
+{% set jsCmps  = [] %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>LemonEezee frontend</h1>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

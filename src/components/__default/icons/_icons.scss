@@ -1,0 +1,18 @@
+.icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+
+  &__svg {
+    display: block;
+    width: inherit;
+    height: inherit;
+    fill: #000;
+  }
+
+  &--empty {
+    border-radius: 50%;
+    background: #ddd;
+  }
+
+}

@@ -1,0 +1,17 @@
+{%- if style is defined and style != '' -%}
+  {%- set style = ' icon--' ~ style -%}
+{%- endif -%}
+
+{%- if class is defined and class != '' -%}
+  {%- set class = ' ' ~ class -%}
+{%- endif -%}
+
+{%- if icon -%}
+  <span class="icon{{ style }}{{ class }}" aria-hidden="true" {{- attributes }}>
+    <svg class="icon__svg">
+      <use xlink:href="./assets/img/icons/sprite.svg#{{ icon }}"></use>
+    </svg>
+  </span>
+{%- else -%}
+  <span class="icon icon--empty" aria-hidden="true"></span>
+{%- endif -%}

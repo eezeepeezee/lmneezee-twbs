@@ -1,0 +1,50 @@
+/* Shorthanded for Bootstrap mixins */
+@mixin screen($bpt) {
+  @include media-breakpoint-up($bpt) {
+    @content;
+  }
+}
+
+@mixin screen-max($bpt) {
+  @include media-breakpoint-down($bpt) {
+    @content;
+  }
+}
+
+@mixin screen-only($bpt) {
+  @include media-breakpoint-only($bpt) {
+    @content;
+  }
+}
+
+@mixin screen-from-to($bpt_from, $bpt_to) {
+  @include media-breakpoint-between($bpt_from, $bpt_to) {
+    @content;
+  }
+}
+
+/* Portrait and Landscape screens */
+@mixin screen-pt {
+  @media only screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin screen-ls {
+  @media only screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* IE and Edge */
+@mixin ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin edge {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}

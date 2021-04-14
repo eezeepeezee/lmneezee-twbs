@@ -1,0 +1,40 @@
+/* Special links to wrap around the closest parent with position: relative */
+a.a--wrap::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: '';
+  background-color: rgba(0, 0, 0, 0);
+  appearance: none;
+}
+
+/* Disabling hover state. Can be used on preloader, etc. */
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+/* Makes sections full height */
+.min-height-vp {
+  min-height: var(--window-height);
+}
+
+.height-vp {
+  height: var(--window-height);
+}
+
+/* SEO-friendly hidden elements, which should be available for screenreaders or search engines */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

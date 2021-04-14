@@ -1,0 +1,59 @@
+/* *
+ *
+ * Generate styles to assets/style.css
+ *
+ * */
+
+/* Import Bootstrap – Required */
+@import "../../__core/__core-scss/__libs/bootstrap/functions";
+@import "../../__core/__core-scss/__libs/bootstrap/variables";
+@import "../../__core/__core-scss/__libs/bootstrap/mixins";
+
+/* Bootstrap variables override */
+@import "../../components/__bootstrap-overwrite/**/*.scss";
+
+/* Import Bootstrap – Optional */
+@import "../../__core/__core-scss/__libs/bootstrap/root";
+@import "../../__core/__core-scss/__libs/bootstrap/reboot";
+@import "../../__core/__core-scss/__libs/bootstrap/type";
+@import "../../__core/__core-scss/__libs/bootstrap/images";
+@import "../../__core/__core-scss/__libs/bootstrap/containers";
+@import "../../__core/__core-scss/__libs/bootstrap/grid";
+//@import "../../__core/__core-scss/__libs/bootstrap/tables";
+//@import "../../__core/__core-scss/__libs/bootstrap/forms";
+//@import "../../__core/__core-scss/__libs/bootstrap/buttons";
+//@import "../../__core/__core-scss/__libs/bootstrap/transitions";
+//@import "../../__core/__core-scss/__libs/bootstrap/dropdown";
+//@import "../../__core/__core-scss/__libs/bootstrap/button-group";
+//@import "../../__core/__core-scss/__libs/bootstrap/nav";
+//@import "../../__core/__core-scss/__libs/bootstrap/navbar";
+//@import "../../__core/__core-scss/__libs/bootstrap/card";
+//@import "../../__core/__core-scss/__libs/bootstrap/accordion";
+//@import "../../__core/__core-scss/__libs/bootstrap/breadcrumb";
+//@import "../../__core/__core-scss/__libs/bootstrap/pagination";
+//@import "../../__core/__core-scss/__libs/bootstrap/badge";
+//@import "../../__core/__core-scss/__libs/bootstrap/alert";
+//@import "../../__core/__core-scss/__libs/bootstrap/progress";
+//@import "../../__core/__core-scss/__libs/bootstrap/list-group";
+//@import "../../__core/__core-scss/__libs/bootstrap/close";
+//@import "../../__core/__core-scss/__libs/bootstrap/toasts";
+//@import "../../__core/__core-scss/__libs/bootstrap/modal";
+//@import "../../__core/__core-scss/__libs/bootstrap/tooltip";
+//@import "../../__core/__core-scss/__libs/bootstrap/popover";
+//@import "../../__core/__core-scss/__libs/bootstrap/carousel";
+//@import "../../__core/__core-scss/__libs/bootstrap/spinners";
+//@import "../../__core/__core-scss/__libs/bootstrap/offcanvas";
+
+@import "../../__core/__core-scss/__libs/bootstrap/helpers";
+
+//@import "../../__core/__core-scss/__libs/bootstrap/utilities/api";
+
+/* Import constructor */
+@import "../../__core/__core-scss/__constructor/defaults";
+@import "../../__core/__core-scss/__constructor/helpers";
+@import "../../__core/__core-scss/__constructor/mixins";
+
+/* Import custom styles for components, layouts and pages */
+@import "../../components/**/*.scss";
+@import "../../layouts/**/*.scss";
+@import "../../pages/**/*.scss";
