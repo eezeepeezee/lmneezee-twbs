@@ -8,9 +8,11 @@
     <div class="{{ container }}">
         <div class="row">
         {%- for i in 1..gridColumns -%}
-            <div class="col-1" style="outline: 1px solid rgba({{ colorGuides }}, 0.4); background: rgba({{ colorGuides }}, 0.15)">
-        	   <p style="color: rgba({{ colorGuides }}, 0.4)">{{ i }}</p>
-        	   <p style="color: rgba({{ colorGuides }}, 0.4)">{{ i }}</p>
+            <div class="col-1">
+                <div class="guides-col" style="outline: 1px solid rgba({{ colorGuides }}, 0.4); background: rgba({{ colorGuides }}, 0.15)">
+            	    <p style="color: rgba({{ colorGuides }}, 0.4)">{{ i }}</p>
+            	    <p style="color: rgba({{ colorGuides }}, 0.4)">{{ i }}</p>
+                </div>
             </div>
         {%- endfor -%}
       </div>

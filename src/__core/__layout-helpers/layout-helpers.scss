@@ -35,17 +35,19 @@
       margin-bottom: 0 !important;
 
       > *[class*='col'] {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
 
-        p {
-          font-size: 1rem;
-          font-weight: bold;
+        > .guides-col {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+
+          p {
+            font-size: 1rem;
+            font-weight: bold;
+          }
+
         }
 
       }

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* *
+ *
+ * Styling Layout Helpers
+ *
+ * */
+/* Import Bootstrap */
+/* Layout guides show the grid columns. Color is set in config.json */
+.layout-guides {
+  min-width: 320px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998 !important;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  margin: 0 auto !important; }
+  .layout-guides .container,
+  .layout-guides .container-fluid {
+    height: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
+    .layout-guides .container .row,
+    .layout-guides .container-fluid .row {
+      height: 100%;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important; }
+      .layout-guides .container .row > *[class*='col'] > .guides-col,
+      .layout-guides .container-fluid .row > *[class*='col'] > .guides-col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 100%; }
+        .layout-guides .container .row > *[class*='col'] > .guides-col p,
+        .layout-guides .container-fluid .row > *[class*='col'] > .guides-col p {
+          font-size: 1rem;
+          font-weight: bold; }
+
+/* Layout breakpoints shows current breakpoint and screen orientation */
+.layout-breakpoints {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 9999 !important;
+  pointer-events: none;
+  padding: 4px 16px;
+  border-radius: 0 0 4px 4px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  opacity: 0; }
+
+.layout-breakpoints::before {
+  content: "xs ≥ 0"; }
+  @media (min-width: 576px) {
+    .layout-breakpoints::before {
+      content: "sm ≥ 576px"; } }
+  @media (min-width: 768px) {
+    .layout-breakpoints::before {
+      content: "md ≥ 768px"; } }
+  @media (min-width: 992px) {
+    .layout-breakpoints::before {
+      content: "lg ≥ 992px"; } }
+  @media (min-width: 1200px) {
+    .layout-breakpoints::before {
+      content: "xl ≥ 1200px"; } }
+  @media (min-width: 1400px) {
+    .layout-breakpoints::before {
+      content: "xxl ≥ 1400px"; } }
+
+/* Hiding cursor and disabling pointer events for testing keyboard-only accessibility */
+.mouse-killed {
+  pointer-events: none !important;
+  cursor: none !important; }
+  .mouse-killed *,
+  * .mouse-killed::before,
+  * .mouse-killed::after {
+    pointer-events: none !important;
+    cursor: none !important; }
+
+/* Blurring everything to test design for accents */
+.wrapper--blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  overflow-x: hidden; }
+
+/* Adding outlines to everything on a page */
+.wrapper--outlined {
+  outline: 1px solid red; }
+  .wrapper--outlined > * {
+    outline: 1px solid green; }
+    .wrapper--outlined > * > * {
+      outline: 1px solid brown; }
+      .wrapper--outlined > * > * > * {
+        outline: 1px solid black; }
+        .wrapper--outlined > * > * > * > * {
+          outline: 1px solid silver; }
+          .wrapper--outlined > * > * > * > * > * {
+            outline: 1px solid pink; }
+            .wrapper--outlined > * > * > * > * > * > * {
+              outline: 1px solid grey; }
+              .wrapper--outlined > * > * > * > * > * > * > * {
+                outline: 1px solid violet; }
+                .wrapper--outlined > * > * > * > * > * > * > * > * {
+                  outline: 1px solid navy; }
+                  .wrapper--outlined > * > * > * > * > * > * > * > * > * {
+                    outline: 1px solid orange; }
+                    .wrapper--outlined > * > * > * > * > * > * > * > * > * > * {
+                      outline: 1px solid red; }
