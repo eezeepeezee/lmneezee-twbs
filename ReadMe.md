@@ -16,6 +16,7 @@ LemonEezee is a frontend-template that helps quickly start projects from scratch
 ## Requirements
 
 * [Node.js >= v.10](https://nodejs.org/en/)
+* [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md)
 * [Gulp](https://www.npmjs.com/package/gulp)
 
 
@@ -32,6 +33,7 @@ Install npm packages:
 ```bash
 $ cd my-awesome-project
 $ rm -rf .git
+$ nvm use
 $ npm i
 ```
 
