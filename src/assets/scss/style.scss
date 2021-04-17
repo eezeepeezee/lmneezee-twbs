@@ -4,13 +4,16 @@
  *
  * */
 
+
 /* Import Bootstrap – Required */
 @import "../../__core/__core-scss/__libs/bootstrap/functions";
 @import "../../__core/__core-scss/__libs/bootstrap/variables";
 @import "../../__core/__core-scss/__libs/bootstrap/mixins";
 
+
 /* Bootstrap variables override */
 @import "../../components/__bootstrap-overwrite/variables";
+
 
 /* Import Bootstrap – Optional */
 @import "../../__core/__core-scss/__libs/bootstrap/root";
@@ -43,18 +46,19 @@
 //@import "../../__core/__core-scss/__libs/bootstrap/carousel";
 //@import "../../__core/__core-scss/__libs/bootstrap/spinners";
 //@import "../../__core/__core-scss/__libs/bootstrap/offcanvas";
-
 @import "../../__core/__core-scss/__libs/bootstrap/helpers";
-
 //@import "../../__core/__core-scss/__libs/bootstrap/utilities/api";
+
 
 /* Import constructor */
 @import "../../__core/__core-scss/__constructor/defaults";
 @import "../../__core/__core-scss/__constructor/helpers";
 @import "../../__core/__core-scss/__constructor/mixins";
 
+
 /* All other Bootstrap override – can be everything but variables*/
 // @import "../../components/__bootstrap-overwrite/**/*.scss";
+
 
 /* Import custom styles for components, layouts and pages */
 @import "../../components/**/*.scss";
