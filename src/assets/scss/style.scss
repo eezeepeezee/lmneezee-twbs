@@ -7,13 +7,15 @@
 
 /* Import Bootstrap – Required */
 @import "../../__core/__core-scss/__libs/bootstrap/functions";
-@import "../../__core/__core-scss/__libs/bootstrap/variables";
-@import "../../__core/__core-scss/__libs/bootstrap/mixins";
 
 
 /* Bootstrap variables override */
 @import "../../components/__bootstrap-overwrite/variables";
 
+
+/* Import Bootstrap – Required */
+@import "../../__core/__core-scss/__libs/bootstrap/variables";
+@import "../../__core/__core-scss/__libs/bootstrap/mixins";
 
 /* Import Bootstrap – Optional */
 @import "../../__core/__core-scss/__libs/bootstrap/root";
