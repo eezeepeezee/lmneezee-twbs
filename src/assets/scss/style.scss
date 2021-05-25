@@ -6,11 +6,13 @@
 
 /* Import Bootstrap – Required */
 @import "../../__core/__core-scss/__libs/bootstrap/functions";
-@import "../../__core/__core-scss/__libs/bootstrap/variables";
-@import "../../__core/__core-scss/__libs/bootstrap/mixins";
 
 /* Bootstrap variables override */
 @import "../../components/__bootstrap-overwrite/**/*.scss";
+
+/* Import Bootstrap – Required */
+@import "../../__core/__core-scss/__libs/bootstrap/variables";
+@import "../../__core/__core-scss/__libs/bootstrap/mixins";
 
 /* Import Bootstrap – Optional */
 @import "../../__core/__core-scss/__libs/bootstrap/root";
@@ -45,7 +47,6 @@
 //@import "../../__core/__core-scss/__libs/bootstrap/offcanvas";
 
 @import "../../__core/__core-scss/__libs/bootstrap/helpers";
-
 //@import "../../__core/__core-scss/__libs/bootstrap/utilities/api";
 
 /* Import constructor */
