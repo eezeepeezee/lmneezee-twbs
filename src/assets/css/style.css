@@ -1781,6 +1781,7 @@ a.a--wrap::after {
 /* Shorthanded for Bootstrap mixins */
 /* Portrait and Landscape screens */
 /* IE and Edge */
+/* All other Bootstrap override – can be everything but variables*/
 /* Import custom styles for components, layouts and pages */
 .icon {
   display: inline-block;
