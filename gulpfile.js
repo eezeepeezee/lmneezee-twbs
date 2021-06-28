@@ -192,7 +192,7 @@ function cssCore() {
     .src([`${paths.src.assets}scss/style.scss`])
     .pipe(plumber({ handleError(err) { console.log(err); this.emit('end'); } }))
     .pipe(sassGlob())
-    .pipe(sass({ errLogToConsole: true }))
+    .pipe(sass({ errLogToConsole: true, noCache: true }))
     .pipe(autoprefixer(['last 10 versions', '> 1%', 'IE 11'], { cascade: true }))
     //.pipe(cssnano({ autoprefixer: false, zindex: false, reduceIdents: false, colormin: false, discardUnused: false }))
     .pipe(gulp.dest(`${paths.src.assets}css/`));
@@ -395,11 +395,8 @@ function watchFiles() {
   /* Watch pages only to recompile only updated */
   gulp.watch(['src/pages/**/*.twig'], gulp.series(htmlPages, browserSyncReload));
 
-  /* Watch common Sass */
-  //gulp.watch([`${paths.src.__core}__core-scss/**/*.scss`, `!${paths.src.__core}__core-scss/custom.scss`], gulp.series(cssCore, browserSyncReload));
-
   /* Watch custom Sass */
-  gulp.watch(['src/{components,layouts,pages}/**/*.scss'], gulp.series(cssCore, browserSyncReload));
+  gulp.watch(['src/{components,layouts,pages}/**/*.scss', 'src/assets/scss/style.scss'], gulp.series(cssCore, browserSyncReload));
 
   /* Watch custom JS */
   gulp.watch([`${paths.src.components}**/*.js`], gulp.series(jsCustom, browserSyncReload));

@@ -16,6 +16,7 @@
 /* Import Bootstrap – Required */
 @import "../../__core/__core-scss/__libs/bootstrap/variables";
 @import "../../__core/__core-scss/__libs/bootstrap/mixins";
+@import "../../__core/__core-scss/__libs/bootstrap/utilities";
 
 /* Import Bootstrap – Optional */
 @import "../../__core/__core-scss/__libs/bootstrap/root";
@@ -49,7 +50,8 @@
 //@import "../../__core/__core-scss/__libs/bootstrap/spinners";
 //@import "../../__core/__core-scss/__libs/bootstrap/offcanvas";
 @import "../../__core/__core-scss/__libs/bootstrap/helpers";
-//@import "../../__core/__core-scss/__libs/bootstrap/utilities/api";
+@import "../../__core/__core-scss/__libs/bootstrap/utilities/api";
+
 
 
 /* Import constructor */
