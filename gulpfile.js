@@ -192,7 +192,7 @@ function cssCore() {
     .src([`${paths.src.assets}scss/style.scss`])
     .pipe(plumber({ handleError(err) { console.log(err); this.emit('end'); } }))
     .pipe(sassGlob())
-    .pipe(sass({ errLogToConsole: true }))
+    .pipe(sass({ errLogToConsole: true, noCache: true }))
     .pipe(autoprefixer(['last 10 versions', '> 1%', 'IE 11'], { cascade: true }))
     //.pipe(cssnano({ autoprefixer: false, zindex: false, reduceIdents: false, colormin: false, discardUnused: false }))
     .pipe(gulp.dest(`${paths.src.assets}css/`));
