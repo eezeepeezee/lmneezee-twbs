@@ -396,7 +396,7 @@ function watchFiles() {
   gulp.watch(['src/pages/**/*.twig'], gulp.series(htmlPages, browserSyncReload));
 
   /* Watch custom Sass */
-  gulp.watch(['src/{components,layouts,pages}/**/*.scss', 'src/assets/scss/style.scss'], gulp.series(cssCore, browserSyncReload));
+  gulp.watch(['src/{components,layouts,pages}/**/*.scss', 'src/assets/scss/*.scss'], gulp.series(cssCore, browserSyncReload));
 
   /* Watch custom JS */
   gulp.watch([`${paths.src.components}**/*.js`], gulp.series(jsCustom, browserSyncReload));

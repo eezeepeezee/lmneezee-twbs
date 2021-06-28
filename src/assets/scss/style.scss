@@ -10,7 +10,7 @@
 
 
 /* Bootstrap variables override */
-@import "../../components/__bootstrap-overwrite/variables";
+@import "../../assets/scss/bootstrap-overwrite";
 
 
 /* Import Bootstrap – Required */
@@ -53,15 +53,10 @@
 @import "../../__core/__core-scss/__libs/bootstrap/utilities/api";
 
 
-
 /* Import constructor */
 @import "../../__core/__core-scss/__constructor/defaults";
 @import "../../__core/__core-scss/__constructor/helpers";
 @import "../../__core/__core-scss/__constructor/mixins";
-
-
-/* All other Bootstrap override – can be everything but variables*/
-// @import "../../components/__bootstrap-overwrite/**/*.scss";
 
 
 /* Import custom styles for components, layouts and pages */
